@@ -3,12 +3,12 @@ import React from 'react';
 
 const LoginPage: React.FC = () => {
   return (
-    <div className="min-h-screen flex">
+    <div dir='rtl' className="min-h-screen flex">
       {/* Sidebar */}
-      <div className="w-1/2 bg-blue-500 rounded-r-xl p-8">
+      <div className="w-1/2 bg-blue-500 rounded-s-lg p-8">
         {/* Sidebar Content */}
-        <h1 className="text-4xl text-white mb-4">Welcome to our app</h1>
-        <p className="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h1 className="text-4xl text-white mb-4">EMS</h1>
+        <p className="text-white">Beyond and Away</p>
       </div>
 
       
