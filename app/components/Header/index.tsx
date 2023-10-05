@@ -1,15 +1,15 @@
 const Navbar: React.FC = () => {
     return (
       <nav className="bg-[#a8d3eb] p-4 flex justify-between items-center">
-        <div>
+        <div className="flex items-center flex-grow"> 
           <input
             type="text"
             placeholder="Search..."
-            className="px-4 py-2 rounded-lg bg-white text-white focus:outline-none focus:ring focus:border-blue-300 w-100"
+            className="px-4 py-2 rounded-lg bg-white text-black focus:outline-none focus:ring focus:border-blue-300 w-3/4" // Adjust width here
           />
         </div>
         <div>
-          {/* Add user picture here */}
+          
           <img
             src="/path/to/user-picture.jpg"
             alt="User"
