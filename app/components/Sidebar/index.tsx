@@ -1,5 +1,7 @@
 import Link from 'next/link';
 
+import img from "../../../public/profile.png"
+
 const Sidebar: React.FC = () => {
   return (
     <aside className="bg-[#021350] text-white w-64 p-4 flex flex-col min-h-screen rounded-br-xl">
@@ -16,22 +18,22 @@ const Sidebar: React.FC = () => {
       <div className="flex flex-col justify-between flex-grow p-6">
         <ul className="space-y-2">
           <li>
-            <Link href="/">
+            <Link href="/dashboard/home">
               <div className="block py-2 hover:text-blue-500">Home</div>
             </Link>
           </li>
           <li>
-            <Link href="/inbox">
+            <Link href="/dashboard/inbox">
               <div className="block py-2 hover:text-blue-500">Inbox</div>
             </Link>
           </li>
           <li>
-            <Link href="/tasks">
+            <Link href="/dashboard/tasks">
               <div className="block py-2 hover:text-blue-500">Tasks</div>
             </Link>
           </li>
           <li>
-            <Link href="/profile">
+            <Link href="/dashboard/profile">
               <div className="block py-2 hover:text-blue-500">Profile</div>
             </Link>
           </li>
@@ -40,7 +42,7 @@ const Sidebar: React.FC = () => {
         <div className="mt-4">
           {/* Place user picture here */}
           <img
-            src="/path/to/user-picture.jpg"
+            src="../../../public/profile.png"
             alt="User"
             className="w-12 h-12 rounded-full mx-auto"
           />

@@ -25,10 +25,40 @@ export const employees = [
           description: "Finish the project milestone by the end of the month.",
           status: "In Progress",
         },
+        {
+          id: "2",
+          title: "Complete Project TY",
+          description: "Finish the project milestone by the end of the month.",
+          status: "In Progress",
+        },
+        {
+          id: "3",
+          title: "Research Project X4E",
+          description: "Finish the project milestone by the end of the month.",
+          status: "In Progress",
+        },
+        {
+          id: "4",
+          title: "Start Project XTY",
+          description: "Finish the project milestone by the end of the month.",
+          status: "In Progress",
+        },
       ],
       messages: [
         {
           id: "1",
+          sender: "John Doe",
+          content: "Meeting at 2 PM today.",
+          timestamp: "2023-01-12T14:00:00Z",
+        },
+        {
+          id: "2",
+          sender: "John Doe",
+          content: "Meeting at 2 PM today.",
+          timestamp: "2023-01-12T14:00:00Z",
+        },
+        {
+          id: "3",
           sender: "John Doe",
           content: "Meeting at 2 PM today.",
           timestamp: "2023-01-12T14:00:00Z",

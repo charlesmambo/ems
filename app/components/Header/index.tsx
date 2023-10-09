@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
         <div>
           
           <img
-            src="/path/to/user-picture.jpg"
+            src="../../../public/profile.png"
             alt="User"
             className="w-8 h-8 rounded-full"
           />

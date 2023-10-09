@@ -1,17 +1,21 @@
-import React from 'react'
+import React, { Children } from 'react'
 import Navbar from '../components/Header'
 import Sidebar from '../components/Sidebar'
 
-function Home() {
+function Layout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
     <div className="flex">
       <Sidebar />
       <div className="flex-1">
         <Navbar />
-        {/* <Component {...pageProps} /> */}
+        {children}
       </div>
     </div>
   )
 }
 
-export default Home
+export default Layout

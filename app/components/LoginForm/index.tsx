@@ -1,35 +1,39 @@
-// pages/LoginPage.tsx
-import React from 'react';
+'use client';
+// src/components/LoginForm.tsx
+import { useState } from "react";
+// import { useRouter } from "next/router";
 
-const LoginPage: React.FC = () => {
+const LoginForm = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  // const router = useRouter();
+
+  const handleLogin = () => {
+    // You can replace this with actual authentication logic.
+    // For simplicity, we're using hard-coded values here.
+    if (username === "user" && password === "password") {
+      // Redirect to the home page upon successful login
+      window.location.href = "/dashboard/home";
+    } else {
+      alert("Invalid username or password");
+    }
+  };
+
   return (
-    <div dir='rtl' className="min-h-screen flex">
-      {/* Sidebar */}
-      <div className="w-1/2 bg-blue-500 rounded-s-lg p-8">
-        {/* Sidebar Content */}
-        <h1 className="text-4xl text-white mb-4">EMS</h1>
-        <p className="text-white">Beyond and Away</p>
-      </div>
-
-      
-      <div className="w-1/2 p-8">
-        
-        <h2 className="text-2xl font-semibold mb-4">Login</h2>
-        
-        <form>
+    <div>
+      <form>
           <div className="mb-4">
             <label htmlFor="username" className="block text-gray-700">Username</label>
-            <input type="text" id="username" name="username" className="border rounded-lg px-3 py-2 w-full" />
+            <input type="text" id="username" name="username" value={username} className="border rounded-lg px-3 py-2 w-full" onChange={(e) => setUsername(e.target.value)}/>
           </div>
           <div className="mb-4">
             <label htmlFor="password" className="block text-gray-700">Password</label>
-            <input type="password" id="password" name="password" className="border rounded-lg px-3 py-2 w-full" />
+            <input type="password" id="password" name="password" value={password} className="border rounded-lg px-3 py-2 w-full" onChange={(e) => setPassword(e.target.value)} />
           </div>
-          <button type="submit" className="bg-blue-500 text-white rounded-lg px-4 py-2">Login</button>
+          <button type="submit" className="bg-blue-500 text-white rounded-lg px-4 py-2" onClick={handleLogin}>Login</button>
         </form>
-      </div>
     </div>
   );
 };
 
-export default LoginPage;
+export default LoginForm;
