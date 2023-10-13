@@ -20,15 +20,18 @@ const Dashboard: React.FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4">
           <div className="col-span-1">
             <InboxComponent messages={user.messages} />
-          </div>
-          <div className="col-span-1">
+            <br />
+            <LeaveComponent leaveDays={user.leaveDays} />
+            <br />
             <HolidayComponent holidays={["Holiday 1", "Holiday 2"]} />
           </div>
           <div className="col-span-1">
-            <LeaveComponent leaveDays={user.leaveDays} />
+            <TodayComponent news={["News 1", "News 2"]} posts={["Post 1", "Post 2"]} />
           </div>
           <div className="col-span-1">
-            <TodayComponent news={["News 1", "News 2"]} posts={["Post 1", "Post 2"]} />
+          </div>
+          <div className="col-span-1">
+
           </div>
         </div>
       </div>
